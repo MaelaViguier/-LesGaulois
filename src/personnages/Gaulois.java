@@ -1,6 +1,21 @@
 package personnages;
 
-public class Gaulois {
+public class Gaulois extends Personnage{
+	
+	public Gaulois(String nom, int force) {
+		super(nom, force); 
+	}
+	
+	@Override
+	public String donnerAuteur() {
+		return "gaulois "; 
+	}
+}
+
+
+/*package personnages;
+
+public class Gaulois extends personnage{
 	private String nom;
 	private int force;
 
@@ -32,3 +47,4 @@ public class Gaulois {
 //	}
 
 }
+*/
