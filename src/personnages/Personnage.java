@@ -2,7 +2,7 @@ package personnages;
 
 public abstract class Personnage {
 	
-	private String nom; 
+	public String nom; 
 	private int force; 
 	
 	public Personnage(String nom, int force) {
@@ -32,7 +32,7 @@ public abstract class Personnage {
 			System.out.println("Le " + donnerAuteur() + nom + " : " + "J'abandonne");
 		}
 		else {
-			System.out.println("Le " + donnerAuteur() + nom + " : " + "Aïe ! ");
+			System.out.println("Le " + donnerAuteur() + nom + " : " + "Aï¿½e ! ");
 		}
 	}
 
