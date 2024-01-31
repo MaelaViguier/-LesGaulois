@@ -7,7 +7,7 @@ import personnages.Soldat;
 public class TestSites {
 
 	public static void main(String[] args) {
-		
+	/*
 	Gaulois vercingetorix = new Gaulois("Vercingetorix" , 5);
 	Village village = new Village(vercingetorix); 
 	
@@ -53,6 +53,6 @@ public class TestSites {
 	village.changerChef(abraracourcix); 
 
 	camp.changerCommandant (briseradius);
-	camp.changerCommandant (chorus);
+	camp.changerCommandant (chorus);*/
 	}
 }
