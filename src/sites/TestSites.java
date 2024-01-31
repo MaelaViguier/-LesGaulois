@@ -1,49 +1,58 @@
 package sites;
 
-import personnages.EnumGARDE;
+import personnages.Grade;
 import personnages.Gaulois;
 import personnages.Soldat;
 
 public class TestSites {
 
-	Gaulois vercingetorix = new Gaulois("Vercingétorix" , 5);
-	Village village = new Village(vercingetorix, null); 
+	public static void main(String[] args) {
+		
+	Gaulois vercingetorix = new Gaulois("Vercingetorix" , 5);
+	Village village = new Village(vercingetorix); 
 	
-	private EnumGARDE CENTURION;
-	Soldat minus = new Soldat("Minus", 2, CENTURION); 
-	Camp camp = new Camp(minus, null); 
+	Soldat minus = new Soldat("Minus", 2, Grade.CENTURION);
+	Camp camp = new Camp(minus); 
 	
-	//vercingetorix.parler("Je suis un grand guerrier et je vais créer mon village"); 
-	//minus.parler("Je suis en charge de créer un nouveau camp romain. "); 
+	vercingetorix.parler("Je suis un grand guerrier et je vais creer mon village"); 
+	minus.parler("Je suis en charge de creer un nouveau camp romain. "); 
 	
 	//Création des gaulois
-	Gaulois Agecanomix = new Gaulois("Agecanomix", 1);
-	Gaulois Assurancetourix = new Gaulois("Assurancetourix", 2);
-	Gaulois Astérix = new Gaulois("Astérix", 5);
-	Gaulois Obelix = new Gaulois("Obelix", 15);
-	Gaulois Prolix = new Gaulois("Prolix", 2);
+	Gaulois agecanomix = new Gaulois("Agecanomix", 1);
+	Gaulois assurancetourix = new Gaulois("Assurancetourix", 2);
+	Gaulois asterix = new Gaulois("Ast�rix", 5);
+	Gaulois obelix = new Gaulois("Obelix", 15);
+	Gaulois prolix = new Gaulois("Prolix", 2);
 	
 	//Creation des soldats
-	private EnumGARDE SOLDAT;
-	private EnumGARDE TESSERARIUS; 
-	private EnumGARDE OPTIO; 
 
-	Soldat Brutus = new Soldat("Brutus", 5, CENTURION); 
-	Soldat Milexcus = new Soldat("Milexcus", 2, SOLDAT);
-	Soldat TulliusOctopus = new Soldat("Tullius Octopus", 2, TESSERARIUS);
-	Soldat Ballondebaudrus = new Soldat("Ballondebaudrus", 3, OPTIO); 
+	Soldat brutus = new Soldat("Brutus", 5, Grade.CENTURION); 
+	Soldat milexcus = new Soldat("Milexcus", 2, Grade.SOLDAT);
+	Soldat tulliusOctopus = new Soldat("Tullius Octopus", 2, Grade.TESSERARIUS);
+	Soldat ballondebaudrus = new Soldat("Ballondebaudrus", 3, Grade.OPTIO); 
 	
 	//Ajout de Soldat et de Villageois
-	//camp.ajouterSoldat(Brutus); 
-	//camp.ajouterSoldat(Milexcus); 
-	//camp.ajouterSoldat(TulliusOctopus); 
-	//camp.ajouterSoldat(Ballondebaudrus); 
+	camp.ajouterSoldat(brutus); 
+	camp.ajouterSoldat(milexcus); 
+	camp.ajouterSoldat(tulliusOctopus); 
+	camp.ajouterSoldat(ballondebaudrus);
 
-	//village.ajouterVillageois(Agecanomix);
-	//village.ajouterVillageois(Assurancetourix);
-	//village.ajouterVillageois(Astérix);
-	//village.ajouterVillageois(Obelix);
-	//village.ajouterVillageois(Prolix);
-
+	village.ajouterVillageois(agecanomix);
+	village.ajouterVillageois(assurancetourix);
+	village.ajouterVillageois(asterix);
+	village.ajouterVillageois(obelix);
+	village.ajouterVillageois(prolix);
 	
+	camp.afficherCamp(camp);
+	village.afficherVillageois(village);
+
+	Gaulois abraracourcix = new Gaulois("abraracourcix" , 5);
+	Soldat briseradius = new Soldat("Briseradius", 4, Grade.SOLDAT);
+	Soldat chorus = new Soldat("Chorus", 4, Grade.CENTURION);
+
+	village.changerChef(abraracourcix); 
+
+	camp.changerCommandant (briseradius);
+	camp.changerCommandant (chorus);
+	}
 }

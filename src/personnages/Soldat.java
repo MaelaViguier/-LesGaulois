@@ -2,11 +2,11 @@ package personnages;
 
 public class Soldat extends Romain{
 	
-	public EnumGARDE garde; 
+	public Grade grade; 
 	
-	public Soldat(String nom, int force, EnumGARDE garde) {
+	public Soldat(String nom, int force, Grade grade) {
 		super(nom,force); 
-		this.garde = garde; 
+		this.grade = grade; 
 	}
 
 }

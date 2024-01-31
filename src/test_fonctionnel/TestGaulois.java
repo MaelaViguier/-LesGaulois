@@ -4,7 +4,7 @@ import personnages.Gaulois;
 import personnages.Romain;
 
 public class TestGaulois {
-	public static void main(String[] args) {
+	public static void main(String[] args) {/*
 		Gaulois asterix = new Gaulois("Astérix", 8);
 		//System.out.println(asterix);
 		//System.out.println(asterix.getNom());
@@ -20,7 +20,7 @@ public class TestGaulois {
 		}
 		
 		asterix.frapper(minus);
-
+*/
 	}
 
 }
