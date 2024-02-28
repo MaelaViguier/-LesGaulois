@@ -21,16 +21,22 @@ public abstract class Personnage {
 	
 	public abstract String donnerAuteur(); 
 	
+
+	public double calculForce(double force) {
+		return force = force/3;
+	}
+		
 	public void frapper(Personnage adversaire) {
 		System.out.println("Le " + donnerAuteur() + nom + " donne un grand coup au " + adversaire.donnerAuteur() + adversaire.getNom());
-		adversaire.recevoirCoup(force/3); 
+		adversaire.recevoirCoup(calculForce(force)); 
+	}
+
+	public double calculForceCoup(double forceCoup) {
+		return force = (int) (force - forceCoup);
 	}
 	
-	
-	
-	
 	public void recevoirCoup(double forceCoup) {
-		force = (int) (force - forceCoup); 
+		double force = calculForceCoup(forceCoup); 
 		if (force <= 0) {
 			force = 0; 
 			System.out.println("Le " + donnerAuteur() + nom + " : " + "J'abandonne");

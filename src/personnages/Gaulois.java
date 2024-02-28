@@ -1,7 +1,5 @@
 package personnages;
 
-import personnages.Soldat;
-
 public class Gaulois extends Personnage{
 	
 	private double booster = 1; 
@@ -16,19 +14,21 @@ public class Gaulois extends Personnage{
 	}
 	
 	public void boirePotion(Potion potion) {
-        if ("Obelix".equals(this.nom)) {
-            return;
-        }
         this.booster *= potion.getPuissance();
         this.parler("Tiens " + this.nom + " une peu de potion maagique ");
     }
+	
+	@Override
+	public double calculForce(double force) {
+		return (force/3)*booster; 
+	}
 	
 	 @Override
 	    public void frapper(Personnage victime) {
 	        double forceCoup = (double)(this.force * this.booster);
 
-			if (this.estATerre()) {
-				this.parler("J'abandonne...");
+			if (victime.estATerre()) {
+				victime.parler("J'abandonne...");
 			}
 			else if(!victime.estATerre() && !this.estATerre()) {
 				super.parler("envoie un grand coup dans la mâchoire de " + victime.getNom() + " avec une force de " + forceCoup);
@@ -40,6 +40,7 @@ public class Gaulois extends Personnage{
 			}
 
 	    }
+	 
 }
 
 

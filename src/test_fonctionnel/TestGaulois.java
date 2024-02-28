@@ -41,10 +41,6 @@ public class TestGaulois {
         minus.equiperPlastron();
         minus.equiperBouclier();
 
-        minus.parler("s'équipe avec un casque.");
-        minus.parler("s'équipe avec un plastron.");
-        minus.parler("s'équipe avec un bouclier.");
-
 		Druide panoramix = new Druide("Panoramix", 0);
 	    		
 	  	panoramix.fabriquerPotion(3);
@@ -58,10 +54,6 @@ public class TestGaulois {
 	  		
 	  	minus.parler("UN GAU... UN GAUGAU...");
 	  	
-	  	
-	for (int i = 0; i < 3; i++) {
 		asterix.frapper(minus);
-		minus.frapper(asterix);
-	}
-	}
+}
 }
