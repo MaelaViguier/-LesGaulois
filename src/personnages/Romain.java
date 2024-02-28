@@ -39,7 +39,7 @@ public class Romain extends personnage{
 			return "J'abandonne";
 		}
 		else {
-			return "Aïe ! ";
+			return "Aie ! ";
 		}
 	}
 

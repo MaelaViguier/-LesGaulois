@@ -20,12 +20,12 @@ public class Village {
 				System.out.println("Le " + chef.donnerAuteur() + chef.nom + " : \" Bienvenue " + gaulois.nom + "! \" ");
 				return true; 
 			}
-	System.out.println("Le " + chef.donnerAuteur() + chef.nom + " : \" Désolé "+ gaulois.nom + " mon village est deja bien rempli.\""); 
+	System.out.println("Le " + chef.donnerAuteur() + chef.nom + " : \" DÃ©solÃ© "+ gaulois.nom + " mon village est deja bien rempli.\""); 
 		return false; 
 	}
 	
 	public void afficherVillageois(Village village) {
-		System.out.println("Le village de " + chef.nom + " est habité par : "); 
+		System.out.println("Le village de " + chef.nom + " est habitÃ© par : "); 
 		
 		for (int i=0 ; i<nbVillageois; i++) {
 			if (village.armeeGaulois[i] != null ) {
@@ -40,4 +40,3 @@ public class Village {
 				System.out.println("Le " + chef.donnerAuteur() + chef.nom + " : \"Merci ! \""); 
 			}
 }
-

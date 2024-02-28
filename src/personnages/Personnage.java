@@ -1,9 +1,10 @@
 package personnages;
 
+
 public abstract class Personnage {
 	
 	public String nom; 
-	private int force; 
+	public int force; 
 	
 	public Personnage(String nom, int force) {
 		this.nom = nom;
@@ -25,16 +26,23 @@ public abstract class Personnage {
 		adversaire.recevoirCoup(force/3); 
 	}
 	
-	public void recevoirCoup(int forceCoup) {
-		force = force - forceCoup; 
-		if (force < 0) {
+	
+	
+	
+	public void recevoirCoup(double forceCoup) {
+		force = (int) (force - forceCoup); 
+		if (force <= 0) {
 			force = 0; 
 			System.out.println("Le " + donnerAuteur() + nom + " : " + "J'abandonne");
 		}
 		else {
-			System.out.println("Le " + donnerAuteur() + nom + " : " + "A�e ! ");
+			System.out.println("Le " + donnerAuteur() + nom + " : " + "Aie ! ");
 		}
 	}
-
 	
+	public boolean estATerre() {
+	    return this.force <= 0;
+	}
+	
+
 }

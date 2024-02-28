@@ -1,6 +1,10 @@
 package personnages;
 
+import personnages.Soldat;
+
 public class Gaulois extends Personnage{
+	
+	private double booster = 1; 
 	
 	public Gaulois(String nom, int force) {
 		super(nom, force); 
@@ -10,6 +14,32 @@ public class Gaulois extends Personnage{
 	public String donnerAuteur() {
 		return "gaulois "; 
 	}
+	
+	public void boirePotion(Potion potion) {
+        if ("Obelix".equals(this.nom)) {
+            return;
+        }
+        this.booster *= potion.getPuissance();
+        this.parler("Tiens " + this.nom + " une peu de potion maagique ");
+    }
+	
+	 @Override
+	    public void frapper(Personnage victime) {
+	        double forceCoup = (double)(this.force * this.booster);
+
+			if (this.estATerre()) {
+				this.parler("J'abandonne...");
+			}
+			else if(!victime.estATerre() && !this.estATerre()) {
+				super.parler("envoie un grand coup dans la m√¢choire de " + victime.getNom() + " avec une force de " + forceCoup);
+				victime.recevoirCoup(forceCoup);
+			}
+	        
+			if (booster>1) {
+				this.booster = this.booster - 0.5 ; 
+			}
+
+	    }
 }
 
 
@@ -37,11 +67,11 @@ public class Gaulois extends personnage{
 	}
 
 	public void frapper(Romain romain) {
-		System.out.println(nom + " envoie un grand coup dans la m‚choire de " + romain.getNom());
+		System.out.println(nom + " envoie un grand coup dans la m√¢choire de " + romain.getNom());
 	}
 
 //	public static void main(String[] args) {
-//		Gaulois asterix = new Gaulois("AstÈrix", 8);
+//		Gaulois asterix = new Gaulois("Ast√©rix", 8);
 //		System.out.println(asterix);
 //		System.out.println(asterix.getNom());
 //	}

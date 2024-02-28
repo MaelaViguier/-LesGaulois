@@ -17,10 +17,10 @@ public class TestSites {
 	vercingetorix.parler("Je suis un grand guerrier et je vais creer mon village"); 
 	minus.parler("Je suis en charge de creer un nouveau camp romain. "); 
 	
-	//Création des gaulois
+	//CrÃ©ation des gaulois
 	Gaulois agecanomix = new Gaulois("Agecanomix", 1);
 	Gaulois assurancetourix = new Gaulois("Assurancetourix", 2);
-	Gaulois asterix = new Gaulois("Ast�rix", 5);
+	Gaulois asterix = new Gaulois("Astérix", 5);
 	Gaulois obelix = new Gaulois("Obelix", 15);
 	Gaulois prolix = new Gaulois("Prolix", 2);
 	
